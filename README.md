@@ -27,6 +27,9 @@ GmailPurge allows a user to:
 
 The tool is intentionally **generic**. Search criteria are provided at runtime rather than being hard-coded into the application.
 
-For example:
+For example, GmailPurge can be used with queries such as:
 
 ```text
+from:example@example.com
+subject:"Newsletter"
+older_than:1y
