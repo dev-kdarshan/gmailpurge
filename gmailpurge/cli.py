@@ -14,10 +14,37 @@ def setup():
     print("\nGmailPurge Setup")
     print("================\n")
 
-    print(
-        "GmailPurge needs a Google OAuth credentials JSON file "
-        "from your Google Cloud project.\n"
-    )
+    print("Before continuing, you need a Google Cloud OAuth")
+    print("credentials JSON file for a Desktop application.\n")
+
+    print("If you do not have one yet, follow these steps:\n")
+
+    print("1. Open Google Cloud Console:")
+    print("   https://console.cloud.google.com/\n")
+
+    print("2. Create a new Google Cloud project or select an existing one.\n")
+
+    print("3. Enable the Gmail API:")
+    print("   APIs & Services -> Library -> Gmail API -> Enable\n")
+
+    print("4. Configure the OAuth consent screen:")
+    print("   Google Auth Platform -> Branding / Audience")
+    print("   Add your Google account as a test user if required.\n")
+
+    print("5. Create an OAuth Client:")
+    print("   Google Auth Platform -> Clients -> Create Client")
+    print("   Application type: Desktop app\n")
+
+    print("6. Download the OAuth credentials JSON file.\n")
+
+    print("The downloaded file is usually located in your Downloads folder.")
+    print("For example:")
+    print("   ~/Downloads/client_secret_123456.json\n")
+
+    print("Google's official Gmail API guide:")
+    print("https://developers.google.com/workspace/gmail/api/quickstart/python\n")
+
+    print("Once you have downloaded the JSON file, enter its path below.\n")
 
     credentials_path = input(
         "Enter path to your Google OAuth credentials JSON: "
@@ -43,7 +70,6 @@ def setup():
 
     except Exception as error:
         print(f"\nAuthentication failed: {error}")
-
 
 def run():
     """Run the GmailPurge cleanup workflow."""
