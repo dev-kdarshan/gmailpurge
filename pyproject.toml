@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmailpurge"
+version = "1.0.0"
+description = "A CLI tool for bulk Gmail cleanup using the Gmail API"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "google-api-python-client",
+    "google-auth",
+    "google-auth-oauthlib"
+]
+
+[project.scripts]
+gmailpurge = "gmailpurge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gmailpurge*"]

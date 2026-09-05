@@ -1,0 +1,28 @@
+# Google OAuth credentials and tokens
+credentials.json
+token.json
+gmail_api_token.json
+*.json
+
+# gmailctl
+.gmailctl/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+gmail-venv/
+
+# Environment variables
+.env
+
+
+# Build artifacts
+*.egg-info/
+build/
+dist/
+
